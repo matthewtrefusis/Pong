@@ -1,6 +1,6 @@
 # Pong Game
 
-A comprehensive, well-designed Pong game built with HTML5 Canvas and JavaScript.
+A comprehensive Pong game built with HTML5 Canvas and JavaScript.
 
 ## Features
 
