@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PONG</h1>
+            <div class="score-board">
+                <div class="score">
+                    <span id="player1Score">0</span>
+                    <span class="divider">-</span>
+                    <span id="player2Score">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-container">
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            
+            <div class="game-overlay" id="gameOverlay">
+                <div class="menu" id="startMenu">
+                    <h2>Welcome to Pong!</h2>
+                    <div class="menu-options">
+                        <button id="singlePlayerBtn" class="menu-btn">Single Player</button>
+                        <button id="multiPlayerBtn" class="menu-btn">Two Players</button>
+                    </div>
+                    <div class="controls-info">
+                        <p><strong>Player 1:</strong> W/S or Arrow Keys</p>
+                        <p><strong>Player 2:</strong> Up/Down Arrows</p>
+                        <p><strong>Pause:</strong> Space or ESC</p>
+                    </div>
+                </div>
+                
+                <div class="menu" id="pauseMenu" style="display: none;">
+                    <h2>Game Paused</h2>
+                    <div class="menu-options">
+                        <button id="resumeBtn" class="menu-btn">Resume</button>
+                        <button id="restartBtn" class="menu-btn">Restart</button>
+                        <button id="mainMenuBtn" class="menu-btn">Main Menu</button>
+                    </div>
+                </div>
+                
+                <div class="menu" id="gameOverMenu" style="display: none;">
+                    <h2 id="winnerText">Player 1 Wins!</h2>
+                    <div class="menu-options">
+                        <button id="playAgainBtn" class="menu-btn">Play Again</button>
+                        <button id="backToMenuBtn" class="menu-btn">Main Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="difficulty">
+                <label for="difficultySelect">Difficulty:</label>
+                <select id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="insane">Insane</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
